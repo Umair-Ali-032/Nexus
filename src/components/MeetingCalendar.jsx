@@ -1,14 +1,19 @@
-
+import React, { useState } from "react";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import interactionPlugin from "@fullcalendar/interaction";
 
 function MeetingCalendar() {
+const [events, setEvents] = useState([
+  { title: "Investor Meeting", date: "2026-03-10" }
+]);
+ const handleDateClick = (info) => {
+  const title = prompt("Enter availability slot");
 
-  const handleDateClick = (info) => {
-    alert("Selected date: " + info.dateStr);
-  };
-
+  if (title) {
+    setEvents([...events, { title, date: info.dateStr }]);
+  }
+};
   return (
     <div>
       <h2>Meeting Calendar</h2>
@@ -17,9 +22,7 @@ function MeetingCalendar() {
         plugins={[dayGridPlugin, interactionPlugin]}
         initialView="dayGridMonth"
         dateClick={handleDateClick}
-        events={[
-          { title: "Investor Meeting", date: "2026-03-10" }
-        ]}
+        events={events}
       />
 
     </div>
