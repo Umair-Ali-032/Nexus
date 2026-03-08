@@ -1,3 +1,4 @@
+import "@fullcalendar/daygrid/index.css";
 import React, { useState } from "react";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
