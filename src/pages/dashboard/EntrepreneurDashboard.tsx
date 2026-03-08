@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Users, Bell, Calendar, TrendingUp, AlertCircle, PlusCircle } from 'lucide-react';
@@ -10,6 +11,7 @@ import { useAuth } from '../../context/AuthContext';
 import { CollaborationRequest } from '../../types';
 import { getRequestsForEntrepreneur } from '../../data/collaborationRequests';
 import { investors } from '../../data/users';
+import MeetingCalendar from '../../components/MeetingCalendar';
 
 export const EntrepreneurDashboard: React.FC = () => {
   const { user } = useAuth();
@@ -167,8 +169,11 @@ export const EntrepreneurDashboard: React.FC = () => {
               ))}
             </CardBody>
           </Card>
+           <MeetingCalendar/>
         </div>
+        
       </div>
+     
     </div>
   );
 };
