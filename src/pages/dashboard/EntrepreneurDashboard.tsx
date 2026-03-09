@@ -14,7 +14,13 @@ import { investors } from '../../data/users';
 
 export const EntrepreneurDashboard: React.FC = () => {
   const { user } = useAuth();
-  const [collaborationRequests, setCollaborationRequests] = useState<CollaborationRequest[]>([]);
+  const [collaborationRequests, setCollaborationRequests] = useState<CollaborationRequest[]>([ 
+      {
+    id: 1,
+    title: "Investor Meeting",
+    status: "pending"
+  }
+  ]);
   const [recommendedInvestors, setRecommendedInvestors] = useState(investors.slice(0, 3));
   
   useEffect(() => {
