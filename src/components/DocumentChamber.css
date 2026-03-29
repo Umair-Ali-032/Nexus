@@ -1,0 +1,68 @@
+/* DocumentChamber.css */
+
+.doc-chamber {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.doc-chamber h2 {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.doc-chamber input[type="file"] {
+  padding: 0.3rem;
+}
+
+.doc-chamber button {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.doc-chamber button:hover {
+  background-color: #0056b3;
+}
+
+.doc-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.doc-item {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  border-radius: 8px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+
+.doc-item p {
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.doc-item iframe {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}
+
+.doc-item select {
+  padding: 0.3rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}

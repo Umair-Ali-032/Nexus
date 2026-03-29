@@ -38,13 +38,15 @@ export interface Message {
   receiverId: string;
   content: string;
   timestamp: string;
+  createdAt?: string;
   isRead: boolean;
+  
 }
 
 export interface ChatConversation {
   id: string;
   participants: string[];
-  lastMessage?: Message;
+  messages?: Message[];
   updatedAt: string;
 }
 

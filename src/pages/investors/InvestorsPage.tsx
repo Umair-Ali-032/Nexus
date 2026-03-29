@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Search, Filter, MapPin } from 'lucide-react';
 import { Input } from '../../components/ui/Input';
@@ -152,3 +153,4 @@ export const InvestorsPage: React.FC = () => {
     </div>
   );
 };
+export default InvestorsPage;

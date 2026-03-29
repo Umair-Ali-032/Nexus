@@ -10,7 +10,7 @@ import { useAuth } from '../../context/AuthContext';
 export const SettingsPage: React.FC = () => {
   const { user } = useAuth();
   
-  if (!user) return null;
+  if (!user) { return <h1 style={{color: "red"}}>USER NULL HAI</h1>;}
   
   return (
     <div className="space-y-6 animate-fade-in">

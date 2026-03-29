@@ -3,6 +3,9 @@ import { FileText, Upload, Download, Trash2, Share2 } from 'lucide-react';
 import { Card, CardHeader, CardBody } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { Badge } from '../../components/ui/Badge';
+import { DocumentChamber } from '../../components/DocumentChamber';
+
+
 
 const documents = [
   {
@@ -95,7 +98,9 @@ export const DocumentsPage: React.FC = () => {
         </Card>
         
         {/* Document list */}
-        <div className="lg:col-span-3">
+        <div className="lg:col-span-3 space-y-4">
+          <DocumentChamber />
+        <h1 style={{color:"red"}}>CHECK</h1>
           <Card>
             <CardHeader className="flex justify-between items-center">
               <h2 className="text-lg font-medium text-gray-900">All Documents</h2>

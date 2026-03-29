@@ -1,0 +1,149 @@
+/* .video-call-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.videos {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.video-box {
+  width: 300px;
+  height: 200px;
+  background: #000;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.controls button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.btn-red {
+  background-color: #ef4444;
+  color: white;
+}
+
+.btn-gray {
+  background-color: #e5e7eb;
+  color: #111827;
+} */
+ /* VideoCall.css */
+
+/* Full-page container */
+.video-call-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(to right, #f0f4f8, #e2e8f0);
+  box-sizing: border-box;
+}
+
+/* Header */
+.video-call-container h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+/* Video containers */
+.videos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+/* Individual video box */
+.video-box {
+  width: 45%;
+  max-width: 600px;
+  min-width: 250px;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease-in-out;
+}
+
+.video-box:hover {
+  transform: scale(1.03);
+}
+
+/* Controls area */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Buttons style */
+.controls button {
+  padding: 0.6rem 1.4rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  background-color: #3b82f6; /* blue */
+  color: white;
+}
+
+.controls button:hover {
+  background-color: #2563eb; /* darker blue */
+  transform: translateY(-2px);
+}
+
+.controls button:active {
+  transform: translateY(0);
+}
+
+/* Toggle buttons (video/audio) */
+.controls button:nth-child(n+2) {
+  background-color: #6b7280; /* gray */
+}
+
+.controls button:nth-child(n+2):hover {
+  background-color: #4b5563;
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .video-box {
+    width: 90%;
+  }
+}
+
+@media (max-width: 640px) {
+  .video-call-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .controls button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}

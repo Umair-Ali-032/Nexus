@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import interactionPlugin, { DateClickArg } from "@fullcalendar/interaction";
@@ -51,50 +51,6 @@ const MeetingCalendar = () => {
     }
 
   };
-
-  // // ADD SLOT
-  // const handleDateClick = (info: DateClickArg) => {
-  //   const title = prompt("Enter availability slot");
-
-  //   if (title) {
-  //     setEvents([...events, { title, date: info.dateStr }]);
-  //   }
-  // };
-
-  // // EDIT / DELETE SLOT
-  // const handleEventClick = (clickInfo: EventClickArg) => {
-
-  //   const action = prompt(
-  //     `Slot: ${clickInfo.event.title}\n\nType:\n1 → edit\n2 → delete`
-  //   );
-
-  //   // DELETE
-  //   if (action === "2") {
-  //     setEvents(events.filter(e => e.date !== clickInfo.event.startStr));
-  //   }
-
-  //   // EDIT
-  //   if (action === "1") {
-  //     const newTitle = prompt("Enter new slot name");
-
-  //     if (newTitle) {
-  //       setEvents(events.map(e =>
-  //         e.date === clickInfo.event.startStr
-  //           ? { ...e, title: newTitle }
-  //           : e
-  //       ));
-  //     }
-  //   }
-  // };
-
-  // const handleDateClick = (info: DateClickArg) => {
-  //   const title = prompt("Enter availability slot");
-
-  //   if (title) {
-  //     setEvents([...events, { title, date: info.dateStr }]);
-  //   }
-  // };
-
   return (
     <div className="p-4 bg-white rounded-lg shadow">
       <h2 className="text-lg font-semibold mb-4">Meeting Calendar</h2>
